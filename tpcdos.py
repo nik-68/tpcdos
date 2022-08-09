@@ -6,7 +6,6 @@ from secrets import choice
 from threading import Thread
 import psutil
 import random
-from scapy.all import *
 
 os.system("clear")
 print("З А Г Р У З К А....")
