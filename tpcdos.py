@@ -64,9 +64,9 @@ day = now.day
 month = now.month
 year = now.year
 
-
+os.system('clear')
 def logo():
-	os.system('clear')
+	
 	print(Fore.BLUE+'''
 	           █▀▄ █▀▄ █▀█ █▀  
 	           █▄▀ █▄▀ █▄█ ▄█  
@@ -78,10 +78,8 @@ def logo():
 
 
 nums = 0
-
-
+time.sleep(3)
 os.system("clear")
-time.sleep(1)
 print ("")
 
 def checking_socks(lines,):
