@@ -1,13 +1,13 @@
 # TCP SYN FLOOD (OVH & NFO BYPASS)
-
 import socket, threading
-from scapy.all import *
 import time
 import os,sys
 from secrets import choice
 from threading import Thread
 import psutil
 import random
+from scapy.all import *
+
 os.system("clear")
 print("З А Г Р У З К А....")
 time.sleep(1.5)
