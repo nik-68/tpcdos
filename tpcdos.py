@@ -24,7 +24,7 @@ print('''
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯
                                 
 ''')
-print("Ddos©Attaka©Tpc")
+print("©Ddos©Attaka©")
 
 time.sleep(2.5)
 os.system("clear")
@@ -72,12 +72,6 @@ def logo():
 	           █▄▀ █▄▀ █▄█ ▄█  
 	 ''')
 	
-
-
-
-
-
-nums = 0
 time.sleep(3)
 os.system("clear")
 print ("")
