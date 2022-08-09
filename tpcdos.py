@@ -71,7 +71,7 @@ def start():
             d.close()
             print("Done...")
             quit()
-            time.sleep(10)
+            time.sleep(500)
 for x in range(thread):
     thread = threading.Thread(target=start)
     thread.start()
