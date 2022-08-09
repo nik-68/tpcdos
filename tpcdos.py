@@ -78,13 +78,12 @@ def first(self):
 	logo()
 	print("")
 	print(pink+b+"Author     : HACODE"+b+pink)
-	print("Team	    : UNITED HACKERS")
-	print("YouTube    : HACODE")
+	print("Team	   : UNITED HACKERS")
 	print("")
 	
 	#
-	ip = input(gren+b+"Target IP  : "+b+gren)
-	port = int(input("Enter Port  : "))
+	ip = input(gren+b+"Target IP : => "+b+gren)
+	port = int(input("Enter Port : => "))
 	print("")
 	print(cyan+b+"[+]--                            [+] 0%"+b+cyan)
 	time.sleep(2)
