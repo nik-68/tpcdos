@@ -175,32 +175,32 @@ def atk(): #Socks Sent Requests
             #print(Fore.RED+"Canʼt Connect To Socks")
 
 if __name__=='__main__':
-    host = str(input('Target (Ex. www.google.com ) : '))
+    host = str(input('Target (Ex. www.google.com ) :=> '))
     if host =='':
         input("Error Input ! Try Again")
         exit()
-    port = str(input('Port (Default Is 80) : '))
+    port = str(input('Port (Default Is 80) :=> '))
     if port =='':
         port = int(80)
-    thr = str(input("Threads (1-800 Default Is 300) : "))
+    thr = str(input("Threads (1-800 Default Is 300) :=> "))
     if thr =='':
         thr = int(300)
     else:
         thr = int(thr)
-    per = str(input("CC-Power (1-100 Default Is 70) : "))
+    per = str(input("CC-Power (1-100 Default Is 70) :=> "))
     if per =='':
         per = int(70)
     else:
         per = int(per)
-    uu = str(input("Path (Default Is / ) : "))
+    uu = str(input("Path (Default Is / ) :=> "))
     if uu=='':
         uu ='/'
-    gt = str(input('Get List? (y/n) : '))
+    gt = str(input('Get List? (y/n) :=> '))
     if gt =='y':
         clone()
     else:
         pass
-    lst = str(input('Socks5 List (socks5.txt) : '))
+    lst = str(input('Socks5 List (socks5.txt) :=> '))
     if lst =='':
         lst = 'socks5.txt'
     lsts = open(lst).readlines()
